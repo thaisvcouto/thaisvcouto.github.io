@@ -2,10 +2,12 @@ from flask import Flask, request, jsonify
 from flask import render_template
 from flask_cors import CORS
 from openai import OpenAI
-from config import OPENAI_API_KEY  #Aquivo que contém a chave particular do OpenAI
 from datetime import datetime
-
+from dotenv import load_dotenv
 import os
+
+load_dotenv() #Aquivo que contém a chave particular do OpenAI
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 app = Flask(__name__, template_folder=os.path.join("templates"), static_folder=os.path.join("static"))
 CORS(app)  #Permite que o frontend acesse o backend
 
