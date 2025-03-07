@@ -29,7 +29,7 @@ document.getElementById("formulario").addEventListener("submit", async function(
     };
 
     try {
-        let resposta = await fetch("http://127.0.0.1:5000/gerar-projeto", {
+        let resposta = await fetch("https://projeta-ai-backend.onrender.com/gerar-projeto", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)
