@@ -1,0 +1,132 @@
+/* Reset e estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Permite que a página cresça além da altura da tela */
+    background-color: #f4f4f4;
+}
+
+html, body {
+    overflow: auto; /* Permite rolagem quando necessário */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Seção da imagem */
+.image-container {
+    flex: 1;
+    background: linear-gradient(135deg, #6A5ACD, #9370DB);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.image-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.image-container p {
+    font-size: 16px;
+}
+
+/* Seção do formulário */
+.form-container {
+    flex: 1;
+    padding: 40px;
+}
+
+.form-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.resposta-container {
+    flex: 1;
+    padding: 40px;
+    display: none;
+}
+
+.resposta-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+input{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+strong {
+    font-weight: bold !important;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .resposta-container {
+        padding: 20px;
+    }
+}
